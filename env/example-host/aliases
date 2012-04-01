@@ -1,0 +1,5 @@
+# -*- mode: shell-script; -*-
+
+echo "setting host aliases..."
+
+alias ll="ls -la"
