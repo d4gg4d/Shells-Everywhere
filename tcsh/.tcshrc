@@ -1,0 +1,4 @@
+# -*- mode: shell-script; -*-
+
+set prompt="<`date +%R:%S`|`hostname -s`:`pwd`> ";
+source ~/.shells/rc/tcsh_aliases

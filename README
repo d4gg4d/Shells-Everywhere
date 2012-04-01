@@ -1,0 +1,49 @@
+= Shells Everywhere =
+
+Everybody hates to hop between computers that doesn't have your favorite prompt and aliases ready when needed. At least I hate it. Therefore I have created this hobby project to have some kind of logical structure when setting up my work environments with minimal fuzz. And reinvent the wheel.
+
+== Prerequisite ==
+
+These process flows requires that you're entering your shell environment as a login shell. For example, in ubuntu terminal go edit -> Profile Preferences -> Title and Command -> check run command as a login shell.
+
+== Architecture ==
+
+Every shell environment is isolated to named folder in the project root (bash, ksh, etc). Every computer is listed as folder in env/ folder and inside them each distinct configurable component is separated to own .env file. Ideally I had mind that one could use only sh compatible script what would be runnable in every shell environment, but then I found that csh based shells are so different that it was easier to replicate the logic for both environments.
+ 
+Next I will describe project structure. 
+
+=== init ===
+
+Scripts that are used to bootstrap shell environments to this project
+
+=== rc ===
+   
+Files that are sourced on each start of a shell (global rc files).   
+
+=== sbin ===
+
+Utility scripts that are used by shell environment initializations.
+
+=== <shell name> ===
+
+Shell startup scripts and shell specific source files.
+
+=== env ===
+
+Common environment modules are placed can be placed in this folder. Host specific configurations are created as sub folders (folder name is "hostname -s").
+
+==== <host> ====
+
+Consist env-files which each consist self-consistent configuration of a component, such as java, maven, glassfish, etc.
+
+== License ==
+  
+Copyright 2012 Sami Airaksinen
+
+This program is free software: you can redistribute it and/or modify it under the terms of the GNU General Public License as published by the Free Software Foundation, either version 3 of the License, or (at your option) any later version.
+
+This program is distributed in the hope that it will be useful, but WITHOUT ANY WARRANTY; without even the implied warranty of MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the GNU General Public License for more details.
+
+You should have received a copy of the GNU General Public License along with this program.  If not, see [http://www.gnu.org/licenses/].
+
+

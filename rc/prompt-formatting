@@ -1,0 +1,20 @@
+# -*- mode: shell-script; -*-
+
+#default time|host:folder>
+PS1="<`date +%R:%S`|`hostname -s`:`pwd`> "
+
+# If this is an xterm set the title to user@host:dir
+case "$TERM" in
+xterm*|rxvt*)
+    PROMPT_COMMAND='echo -ne "\033]0;${USER}@${HOSTNAME}: ${PWD/$HOME/~}\007"'
+    ;;
+*)
+    ;;
+esac
+  
+#=====================================================================
+# enable color support of ls and also add handy aliases
+if [ "$TERM" != "dumb" ] && which dircolors > /dev/null ; then
+    eval "`dircolors -b`"
+    alias ls='ls --color=auto'
+fi

@@ -1,0 +1,13 @@
+# -*- mode: shell-script; -*-
+
+echo "setting common aliases..."
+
+# global aliases
+alias h='history'
+alias ll='ls -l'
+alias la='ls -A'
+alias l='ls -CF'
+alias lt='ls -altrh'
+
+alias m="$VISUAL"
+alias mc="$VISUAL -c"
