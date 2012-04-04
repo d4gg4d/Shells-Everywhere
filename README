@@ -1,42 +1,42 @@
-= Shells Everywhere =
+== Shells Everywhere ==
 
 Everybody hates to hop between computers that doesn't have your favorite prompt and aliases ready when needed. At least I hate it. Therefore I have created this hobby project to have some kind of logical structure when setting up my work environments with minimal fuzz. And reinvent the wheel.
 
-== Prerequisite ==
+=== Prerequisite ===
 
 These process flows requires that you're entering your shell environment as a login shell. For example, in ubuntu terminal go edit -> Profile Preferences -> Title and Command -> check run command as a login shell.
 
-== Architecture ==
+=== Architecture ===
 
 Every shell environment is isolated to named folder in the project root (bash, ksh, etc). Every computer is listed as folder in env/ folder and inside them each distinct configurable component is separated to own .env file. Ideally I had mind that one could use only sh compatible script what would be runnable in every shell environment, but then I found that csh based shells are so different that it was easier to replicate the logic for both environments.
  
 Next I will describe project structure. 
 
-=== init ===
+==== init ====
 
 Scripts that are used to bootstrap shell environments to this project
 
-=== rc ===
+==== rc ====
    
 Files that are sourced on each start of a shell (global rc files).   
 
-=== sbin ===
+==== sbin ====
 
 Utility scripts that are used by shell environment initializations.
 
-=== <shell name> ===
+==== <shell name> ====
 
 Shell startup scripts and shell specific source files.
 
-=== env ===
+==== env ====
 
 Common environment modules are placed can be placed in this folder. Host specific configurations are created as sub folders (folder name is "hostname -s").
 
-==== <host> ====
+===== <host> =====
 
 Consist env-files which each consist self-consistent configuration of a component, such as java, maven, glassfish, etc.
 
-== License ==
+=== License ===
   
 Copyright 2012 Sami Airaksinen
 
