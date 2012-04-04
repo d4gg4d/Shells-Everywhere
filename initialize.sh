@@ -1,7 +1,7 @@
 #!/bin/sh
 
 # bootstraping repo to home folder
-./init/bootstarp.sh
+./init/bootstrap.sh
 
 # setting shells
 echo "setting bash shell..."
