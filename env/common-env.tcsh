@@ -7,5 +7,3 @@ setenv EDITOR `which emacs`
 setenv ALTERNATE_EDITOR `which vim`
 setenv EMAIL your@email.com
 
-setenv history 1000
-
