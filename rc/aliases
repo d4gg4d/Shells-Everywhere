@@ -8,6 +8,3 @@ alias ll='ls -l'
 alias la='ls -A'
 alias l='ls -CF'
 alias lt='ls -altrh'
-
-alias m="$VISUAL"
-alias mc="$VISUAL -c"
