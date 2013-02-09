@@ -11,7 +11,7 @@ fi
 ## host specific component and aliases
 hostname=`hostname -s`;
 if [ -d $env/$hostname ]; then
-    for src in $(find $env/$hostname \( -name *.env -o -name aliases \) ); do
+    for src in $(find $env/$hostname \( -name '*.env' -o -name aliases \) ); do
 	. $src
     done
 else
