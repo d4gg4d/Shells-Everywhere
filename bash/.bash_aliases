@@ -16,4 +16,6 @@ alias clean='echo -n "Really clean this directory?";
           else
              echo "Not cleaned.";
           fi'
+
+alias mci="mvn clean install"
 alias less='less -R'
