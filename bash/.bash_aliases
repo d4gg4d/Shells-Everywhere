@@ -16,3 +16,4 @@ alias clean='echo -n "Really clean this directory?";
           else
              echo "Not cleaned.";
           fi'
+alias less='less -R'

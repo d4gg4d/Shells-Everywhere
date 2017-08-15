@@ -27,6 +27,10 @@ if [ -f /etc/bash_completion ]; then
     . /etc/bash_completion
 fi
 
+LESS='-R '
+LESSCLOSE='/usr/bin/lesspipe %s %s'
+LESSOPEN='| /usr/bin/source-highlight-esc.sh %s'
+
 #=====================================================================
 # Setting aliases and functions if present
   
