@@ -6,7 +6,7 @@ alias natu='nautilus $PWD'
 alias h='history'
 alias j='jobs -l'
 
-## tex related cleaner aliases   
+## tex related cleaner aliases
 alias texclean='rm -f *.toc *.aux *.log *.cp *.fn *.tp *.vr *.pg *.ky'
 alias clean='echo -n "Really clean this directory?";
           read yorn;
