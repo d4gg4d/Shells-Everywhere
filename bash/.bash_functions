@@ -5,5 +5,5 @@ if command -v nitor-dt-register-complete > /dev/null 2>&1; then
 fi
 
 pipe-emacs() {
-    (f=$(mktemp); cat > $f; emacsclient -c $f; rm -v $f);
+    (f=$(mktemp); cat > $f; emacsclient -c $f; cat $f; rm -v $f);
 }
